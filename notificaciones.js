@@ -107,3 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
     programarNotificaciones();
   }
 });
+
+// Configurar Firebase con tu config
+const firebaseConfig = {
+  apiKey: "AIzaSyBw1GKqP2m3QJxlEnolzrUjJ9w3d2ta9jA",
+  authDomain: "europita-465eb.firebaseapp.com",
+  projectId: "europita-465eb",
+  storageBucket: "europita-465eb.appspot.com", // Asegúrate que termina en .appspot.com
+  messagingSenderId: "458801176847",
+  appId: "1:458801176847:web:01280c38b419de5d3c5e7a",
+  measurementId: "G-WYHDXMGTR6"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const messaging = firebase.messaging();
+
+// Función para pedir permiso y obtener token
+async function pedirPermisoFirebase() {
+  try {
+    // Pedir permiso para notificaciones (si no está dado)
+    const permiso = await Notification.requestPermission();
+    if (permiso !== 'granted') {
+      console.log('Permiso para notificaciones denegado');
+      return;
+    }
+    // Obtener token para Firebase Cloud Messaging
+    const token = await messaging.getToken({
+      vapidKey: 'BNf35iKHn9Zvu0KuDYPAv_TYPnuVmfwwqZonIZ7lK-Uw-vtzygU' // Debes poner tu propia clave VAPID de Firebase
+    });
+    console.log('Token FCM:', token);
+
+    // Aquí puedes enviar el token a tu backend o guardarlo localmente para enviar notificaciones
+
+  } catch (error) {
+    console.error('Error obteniendo token Firebase Messaging:', error);
+  }
+}
+
+// Listener para mensajes cuando la web está en primer plano
+messaging.onMessage(payload => {
+  console.log('Mensaje recibido en primer plano: ', payload);
+  // Aquí puedes mostrar notificaciones custom si quieres
+});

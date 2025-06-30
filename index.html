@@ -146,7 +146,10 @@
 
   <script>
 
-    document.getElementById('btnNotificaciones').addEventListener('click', solicitarPermiso);
+    document.getElementById('btnNotificaciones').addEventListener('click', () => {
+    solicitarPermiso(); // tu función que pide permiso y programa notificaciones locales
+    pedirPermisoFirebase(); // y también pide token para push Firebase
+    });
 
     function mostrarInfo(boton) {
       const info = boton.nextElementSibling;
