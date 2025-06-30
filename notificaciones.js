@@ -79,9 +79,9 @@ function programarNotificaciones() {
     const tiempoRestante = notiHora.getTime() - Date.now();
     if (tiempoRestante > 0) {
       setTimeout(() => {
-        new Notification(`¡Próximo juego!`, {
-          body: `${juego.titulo} en 1 hora 🕒`,
-          icon: 'imagenes/icono-192.png'
+        new Notification(`🚨​¡Ey equipo, atentos!🚨​`, {
+          body: `Tenéis ${juego.titulo} en 1 hora 🕒, no lleguéis tarde, saludos de Stitch.`,
+          icon: 'imagenes/logo.png'
         });
       }, tiempoRestante);
     }
