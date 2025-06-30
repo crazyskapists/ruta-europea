@@ -11,7 +11,7 @@ function solicitarPermiso() {
 // Función para programar las notificaciones locales
 function programarNotificaciones() {
   const juegos = [
-    { titulo: 'Dream 😴', hora: '22:20', fecha: '2025-06-30' },
+    { titulo: 'Dream 😴', hora: '23:10', fecha: '2025-06-30' },
     // ... el resto de juegos
   ];
 
