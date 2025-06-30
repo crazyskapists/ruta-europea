@@ -6,7 +6,12 @@
   <title>Ruta Escape Europa</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="estilos.css">
-  <script defer src="notificaciones.js"></script>
+  <!-- Firebase SDKs primero -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging-compat.js" defer></script>
+
+  <!-- Tu JS principal que usa Firebase, al final para que Firebase esté cargado -->
+  <script src="notificaciones.js" defer></script>
   <style>
     :root {
       --color-primario: #2E294E;
@@ -105,19 +110,64 @@
     </article>
   </section>
 
-  <button onclick="solicitarPermiso()">🔔 Activar notificaciones</button>
+  <button id="btnNotificaciones">🔔 Activar notificaciones</button>
 
   <script>
-    function mostrarInfo(boton) {
-      const info = boton.nextElementSibling;
-      info.style.display = (info.style.display === "block") ? "none" : "block";
-    }
+  // Registrar el Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('firebase-service-worker.js')
+      .then(() => console.log('✅ Service Worker registrado'))
+      .catch(err => console.error('❌ Error al registrar el SW:', err));
+  }
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('✅ Service Worker registrado'))
-        .catch(err => console.error('❌ Error SW:', err));
+  // Pedir permiso y programar notificaciones
+  function solicitarPermiso() {
+  // Primero pides permiso y programa tus notificaciones locales
+  Notification.requestPermission().then(permiso => {
+    if (permiso === 'granted') {
+      localStorage.setItem('notificaciones_activadas', 'true');
+      programarNotificaciones();
+
+      // Ahora pides permiso y token para Firebase Messaging
+      pedirPermisoFirebase();
     }
-  </script>
+  });
+}
+
+  function programarNotificaciones() {
+    const juegos = [
+      { titulo: "Escape del Faro", fecha: "2025-07-05", hora: "16:00" },
+      { titulo: "Misterio Gótico", fecha: "2025-07-06", hora: "18:30" },
+      { titulo: "Laboratorio Mutante", fecha: "2025-07-07", hora: "12:00" }
+      // añade los tuyos aquí...
+    ];
+
+    const ahora = new Date();
+
+    juegos.forEach(juego => {
+      if (!juego.fecha || !juego.hora) return;
+
+      const juegoHora = new Date(`${juego.fecha}T${juego.hora}:00`);
+      const notiHora = new Date(juegoHora.getTime() - 60 * 60 * 1000);
+      const tiempoRestante = notiHora.getTime() - ahora.getTime();
+
+      if (tiempoRestante > 0 && tiempoRestante < 10 * 24 * 60 * 60 * 1000) {
+        if (navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.postMessage({
+            titulo: juego.titulo,
+            fecha: juego.fecha,
+            hora: juego.hora
+          });
+        }
+      }
+    });
+  }
+
+  // Ejecutar automáticamente si el usuario ya había dado permiso
+  if (Notification.permission === 'granted' &&
+      localStorage.getItem('notificaciones_activadas') === 'true') {
+    programarNotificaciones();
+  }
+</script>
 </body>
 </html>
