@@ -118,6 +118,13 @@
   <button id="btnNotificaciones">🔔 Activar notificaciones</button>
 
   <script>
+
+    document.getElementById('btnNotificaciones').addEventListener('click', solicitarPermiso);
+
+    function mostrarInfo(boton) {
+      const info = boton.nextElementSibling;
+      info.style.display = (info.style.display === "block") ? "none" : "block";
+    }
   // Registrar el Service Worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('firebase-service-worker.js')
