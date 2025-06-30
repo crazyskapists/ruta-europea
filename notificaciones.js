@@ -8,82 +8,95 @@ function solicitarPermiso() {
 
 function programarNotificaciones() {
   const juegos = [
-    { titulo: 'Dream 😴', hora: '22:00', fecha: '2025-06-30' },
-    { titulo: 'Haunted Dinner', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Mad Tea Party', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Cyber Cube', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Alice', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Guilty', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Stranger Room', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Cativeiro', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Invictus', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Apocalypse', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Dark Cube', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Porto Wine Sabotage', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Porto Lost Memories', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'The Sacrifice', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Prisao da PIDE', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Terras de Vera Cruz', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Ressaca', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'The Last Game Porto', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Casa da Moeda', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Professor: Assalto Final', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'The Game', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Dead City', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'La Cabaña de la Bruja', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Ladrones del Grimorio', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Cueva del Conocimiento', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Tras el último Dragón', hora: '17:30', fecha: '2025-08-03' },
-    { titulo: 'Corporación Pineapple', hora: '11:00', fecha: '2025-08-28' },
-    { titulo: 'Experimento Clandestino', hora: '17:30', fecha: '2025-08-03' }, 
-    { titulo: 'Le Grand Hotel de Paris', hora: '', fecha: '' },
-    { titulo: 'Nautilus', hora: '', fecha: '' },
-    { titulo: 'Secret Mission', hora: '', fecha: '' },
-    { titulo: 'Galactic Mission', hora: '', fecha: '' },
-    { titulo: 'Doomed Expedition', hora: '', fecha: '' },
-    { titulo: 'The Crypt', hora: '', fecha: '' },
-    { titulo: 'Full Experience', hora: '', fecha: '' },
-    { titulo: 'Taxidermist', hora: '', fecha: '' },
-    { titulo: 'Fairy Tale Regulations', hora: '', fecha: '' },
-    { titulo: 'Fantastic Warehouse', hora: '', fecha: '' },
-    { titulo: 'Le Manoir Devaux', hora: '', fecha: '' },
-    { titulo: 'Druid Bane', hora: '', fecha: '' },
-    { titulo: 'The Movies Experience', hora: '', fecha: '' },
-    { titulo: 'Demise of the Gricers', hora: '', fecha: '' },
-    { titulo: 'Saint Romualdus', hora: '', fecha: '' },
-    { titulo: 'Hans Revenge', hora: '', fecha: '' },
-    { titulo: 'Toy Factory', hora: '', fecha: '' },
-    { titulo: 'Monsters Mushers', hora: '', fecha: '' },
-    { titulo: 'Lost and Found', hora: '', fecha: '' },
-    { titulo: 'Illusion', hora: '', fecha: '' },
-    { titulo: 'Jasons Legacy', hora: '', fecha: '' },
-    { titulo: 'Midnite', hora: '', fecha: '' },
-    { titulo: 'Mollys Game', hora: '', fecha: '' },
-    { titulo: 'Pray', hora: '', fecha: '' },
-    { titulo: 'The Non Believers', hora: '', fecha: '' },
-    { titulo: 'Are You Lost', hora: '', fecha: '' },
-    { titulo: 'Are You Lost', hora: '', fecha: '' },
-    { titulo: 'The Dome', hora: '', fecha: '' },
-    { titulo: 'The Alchemist', hora: '', fecha: '' },
-    { titulo: 'Botanist Manor', hora: '', fecha: '' },
+    { titulo: 'Dream 😴', hora: '22:20', fecha: '2025-06-30' },
+    { titulo: 'Haunted Dinner', hora: '12:15', fecha: '2025-08-28' },
+    { titulo: 'Mad Tea Party', hora: '13:30', fecha: '2025-08-28' },
+    { titulo: 'Cyber Cube', hora: '22:00', fecha: '2025-08-28' },
+    { titulo: 'Alice', hora: '9:45', fecha: '2025-08-29' },
+    { titulo: 'Guilty', hora: '11:00', fecha: '2025-08-29' },
+    { titulo: 'Stranger Room', hora: '13:30', fecha: '2025-08-29' },
+    { titulo: 'Cativeiro', hora: '15:15', fecha: '2025-08-29' },
+    { titulo: 'Invictus', hora: '19:00', fecha: '2025-08-29' },
+    { titulo: 'Apocalypse', hora: '20:30', fecha: '2025-08-29' },
+    { titulo: 'Dark Cube', hora: '22:00', fecha: '2025-08-29' },
+    { titulo: 'Porto Wine Sabotage', hora: '10:30', fecha: '2025-08-30' },
+    { titulo: 'Porto Lost Memories', hora: '12:00', fecha: '2025-08-30' },
+    { titulo: 'The Sacrifice', hora: '14:30', fecha: '2025-08-30' },
+    { titulo: 'Prisao da PIDE', hora: '18:00', fecha: '2025-08-30' },
+    { titulo: 'Terras de Vera Cruz', hora: '19:00', fecha: '2025-08-30' },
+    { titulo: 'Ressaca', hora: '20:30', fecha: '2025-08-30' },
+    { titulo: 'The Last Game Porto', hora: '22:00', fecha: '2025-08-30' },
+    { titulo: 'Casa da Moeda', hora: '10:30', fecha: '2025-08-31' },
+    { titulo: 'Professor: Assalto Final', hora: '11:30', fecha: '2025-08-31' },
+    { titulo: 'The Game', hora: '13:30', fecha: '2025-08-31' },
+    { titulo: 'Dead City', hora: '14:30', fecha: '2025-08-31' },
+    { titulo: 'La Cabaña de la Bruja', hora: '21:10', fecha: '2025-08-31' },
+    { titulo: 'Ladrones del Grimorio', hora: '10:00', fecha: '2025-09-01' },
+    { titulo: 'Cueva del Conocimiento', hora: '11:45', fecha: '2025-09-01' },
+    { titulo: 'Tras el último Dragón', hora: '16:00', fecha: '2025-09-01' },
+    { titulo: 'Corporación Pineapple', hora: '19:30', fecha: '2025-09-01' },
+    { titulo: 'Experimento Clandestino', hora: '22:00', fecha: '2025-09-01' }, 
+    { titulo: 'Le Grand Hotel de Paris', hora: '11:45', fecha: '2025-09-04' },
+    { titulo: 'Nautilus', hora: '14:00', fecha: '2025-09-04' },
+    { titulo: 'Secret Mission', hora: '16:30', fecha: '2025-09-04' },
+    { titulo: 'Galactic Mission', hora: '20:00', fecha: '2025-09-04' },
+    { titulo: 'Doomed Expedition', hora: '10:00', fecha: '2025-09-05' },
+    { titulo: 'The Crypt', hora: '12:30', fecha: '2025-09-05' },
+    { titulo: 'Full Experience', hora: '16:00', fecha: '2025-09-05' },
+    { titulo: 'Taxidermist', hora: '19:45', fecha: '2025-09-05' },
+    { titulo: 'Fairy Tale Regulations', hora: '10:00', fecha: '2025-09-06' },
+    { titulo: 'Fantastic Warehouse', hora: '12:00', fecha: '2025-09-06' },
+    { titulo: 'Le Manoir Devaux', hora: '16:00', fecha: '2025-09-06' },
+    { titulo: 'Druid Bane', hora: '18:00', fecha: '2025-09-06' },
+    { titulo: 'The Movies Experience', hora: '10:00', fecha: '2025-09-07' },
+    { titulo: 'Demise of the Gricers', hora: '17:30', fecha: '2025-09-07' },
+    { titulo: 'Saint Romualdus', hora: '11:45', fecha: '2025-09-08' },
+    { titulo: 'Hans Revenge', hora: '13:45', fecha: '2025-09-08' },
+    { titulo: 'Toy Factory', hora: '18:45', fecha: '2025-09-08' },
+    { titulo: 'Monsters Mushers', hora: '21:00', fecha: '2025-09-08' },
+    { titulo: 'Lost and Found', hora: '11:00', fecha: '2025-09-09' },
+    { titulo: 'Illusion', hora: '14:45', fecha: '2025-09-09' },
+    { titulo: 'Jasons Legacy', hora: '18:30', fecha: '2025-09-09' },
+    { titulo: 'Midnite', hora: '20:00', fecha: '2025-09-09' },
+    { titulo: 'Mollys Game', hora: '10:00', fecha: '2025-09-10' },
+    { titulo: 'Pray', hora: '14:00', fecha: '2025-09-10' },
+    { titulo: 'The Non Believers', hora: '17:30', fecha: '2025-09-10' },
+    { titulo: 'Are You Lost', hora: '20:00', fecha: '2025-09-10' },
+    { titulo: 'Are You Lost', hora: '22:00', fecha: '2025-09-10' },
+    { titulo: 'The Dome', hora: '11:30', fecha: '2025-09-11' },
+    { titulo: 'The Alchemist', hora: '16:00', fecha: '2025-09-11' },
+    { titulo: 'Botanist Manor', hora: '22:00', fecha: '2025-09-11' },
     { titulo: '', hora: '', fecha: '' },
     { titulo: '', hora: '', fecha: '' },
     { titulo: '', hora: '', fecha: '' }
     
   ];
 
-  juegos.forEach(juego => {
-    const juegoHora = new Date(`${juego.fecha}T${juego.hora}:00`);
-    const notiHora = new Date(juegoHora.getTime() - 60 * 60 * 1000); // 1 hora antes
+  const ahora = new Date();
 
-    const tiempoRestante = notiHora.getTime() - Date.now();
-    if (tiempoRestante > 0) {
+  juegos.forEach(juego => {
+    if (!juego.fecha || !juego.hora) return; // saltar vacíos
+
+    const juegoHora = new Date(`${juego.fecha}T${juego.hora}:00`);
+
+    // Calcular notificación una hora antes
+    const notiHora = new Date(juegoHora.getTime() - 60 * 60 * 1000);
+
+    const tiempoRestante = notiHora.getTime() - ahora.getTime();
+
+    // Solo programar si:
+    // - la hora de la notificación es en el futuro
+    // - y está dentro de los próximos 10 días (por seguridad de setTimeout)
+    if (tiempoRestante > 0 && tiempoRestante < 10 * 24 * 60 * 60 * 1000) {
       setTimeout(() => {
         new Notification(`🚨​¡Ey equipo, atentos!🚨​`, {
           body: `Tenéis ${juego.titulo} en 1 hora 🕒, no lleguéis tarde, saludos de Stitch.`,
           icon: 'imagenes/logo.png'
         });
       }, tiempoRestante);
+      console.log(`⏰ Notificación programada para ${juego.titulo} a las ${notiHora}`);
+    } else {
+      console.log(`❌ No se programa ${juego.titulo}, ya pasó o es muy lejana.`);
     }
   });
 }
