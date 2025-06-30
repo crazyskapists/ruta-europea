@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruta Escape Europa</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="notificaciones.js"></script>
+  <style>
+    :root {
+      --color-primario: #2E294E;
+      --color-secundario: #1B998B;
+      --color-texto: #FFFFFF;
+      --color-acento: #6EC2E8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-primario);
+      color: var(--color-texto);
+      padding: 1.5rem;
+    }
+
+    h1 {
+      color: var(--color-acento);
+      text-align: center;
+    }
+
+    .dia {
+      margin: 2rem 0;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(110, 194, 232, 0.3);
+    }
+
+    .juego h3 {
+      color: var(--color-secundario);
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      display: block;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: var(--color-acento);
+      color: var(--color-primario);
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #94d6f5;
+    }
+
+    .info-extra {
+      display: none;
+      margin-top: 1rem;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>⭐​ Ruta Europea 2025 ⭐​</h1>
+
+  <section class="dia">
+    <h2>📌 Jueves 28 de agosto – Portugal</h2>
+    <article class="juego">
+      <h3>Dream</h3>
+      <p><strong>Hora:</strong> 11:00</p></a>
+      <p><strong>Lugar:</strong> Lisboa</p>
+      <button onclick="mostrarInfo(this)">Más información</button>
+      <div class="info-extra">
+        <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+        <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+      </div>
+    </article>
+  </section>
+
+  <section class="dia">
+    <h2>3 de agosto – Praga</h2>
+    <article class="juego">
+      <h3>Mindfall</h3>
+      <p><strong>Hora:</strong> 17:30</p>
+      <p><strong>Lugar:</strong> Karlovo náměstí 10, Praga</p>
+      <img src="imagenes/juego2.jpg" alt="Confirmación de reserva">
+      <button onclick="mostrarInfo(this)">Más información</button>
+      <div class="info-extra">
+        <p><strong>Historia:</strong> Un virus mental ha sido liberado. Como agentes secretos, tu equipo debe detener una catástrofe global.</p>
+        <p><strong>Dirección completa:</strong> Karlovo náměstí 10, 120 00 Nové Město, Praga</p>
+      </div>
+    </article>
+  </section>
+
+  <button onclick="solicitarPermiso()">🔔 Activar notificaciones</button>
+
+  <script>
+    function mostrarInfo(boton) {
+      const info = boton.nextElementSibling;
+      info.style.display = (info.style.display === "block") ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service Worker registrado'))
+        .catch(err => console.error('❌ Error SW:', err));
+    }
+  </script>
+</body>
+</html>
