@@ -10,13 +10,9 @@
   <title>Ruta Escape Europa</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="estilos.css">
-  
-  <!-- Firebase SDKs primero -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging-compat.js" defer></script>
-
-  <!-- Tu JS principal que usa Firebase, al final para que Firebase esté cargado -->
-  <script src="notificaciones.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging-compat.js"></script>
+  <script defer src="notificaciones.js"></script>
   <style>
     :root {
       --color-primario: #2E294E;
@@ -88,63 +84,1122 @@
       padding: 1rem;
       border-radius: 0.5rem;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+
+    .close-btn {
+      background-color: rgba(110, 194, 232, 0.3);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: rgba(110, 194, 232, 0.3);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
   </style>
 </head>
 <body>
   <h1>⭐​ Ruta Europea 2025 ⭐​</h1>
 
+    <!-- Planing de Portugal -->
 
-  <button onclick="mostrarInfo2(this)"><strong>Portugal</strong></button>
+    <button onclick="mostrarInfo2(this)"><strong>Portugal</strong></button>
       <div class="info-extra2">
 
-        <section class="dia">
-          <h2>📌 Jueves 28 de agosto – Portugal</h2>
-          <article class="juego">
-            <h3>Dream</h3>
-            <p><strong>Hora:</strong> 11:00</p></a>
-            <p><strong>Lugar:</strong> Lisboa</p>
-            <button onclick="mostrarInfo(this)">Más información</button>
-            <div class="info-extra">
-              <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
-              <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
-            </div>
-          </article>
-        </section>
+          <section class="dia">
+            <h2>📌 Jueves 28 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Dream ​😴​</h3>
+              <p><strong>Hora:</strong> 11:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Lisboa 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 28 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Haunted Dinner 🕯️</h3>
+              <p><strong>Hora:</strong> 12:15h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Lisboa 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Las cenas de Madame Butterfly se han convertido en un imprescindible del Escape Hotel. No porque la comida lo merezca —los huéspedes dicen que no—, sino porque todos pueden jurar que no estaban solos.​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 28 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Mad Tea Party 🫖</h3>
+              <p><strong>Hora:</strong> 13:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Lisboa 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+          <section class="dia">
+            <h2>📌 Jueves 28 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Cyber Cube ⬜</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> ​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/pYSpxMWu2xdvKUuo7" style="color: inherit; text-decoration: none;"> Al. das Antas 14, 4350-415 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> ​</p>
+              </div>
+              </article>
+            </section>
 
         <section class="dia">
-          <h2>📌 Jueves 28 de agosto – Portugal</h2>
-          <article class="juego">
-            <h3>Dream</h3>
-            <p><strong>Hora:</strong> 11:00</p></a>
-            <p><strong>Lugar:</strong> Lisboa</p>
-            <button onclick="mostrarInfo(this)">Más información</button>
-            <div class="info-extra">
-              <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
-              <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
-            </div>
-          </article>
-        </section>
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Alice ♣️♦️</h3>
+              <p><strong>Hora:</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/Q6KKMUXPZjqpodtB6" style="color: inherit; text-decoration: none;"> Rua do Almada, n•522, 4050-034 Porto (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+      
 
         <section class="dia">
-          <h2>📌 Jueves 28 de agosto – Portugal</h2>
-          <article class="juego">
-            <h3>Dream</h3>
-            <p><strong>Hora:</strong> 11:00</p></a>
-            <p><strong>Lugar:</strong> Lisboa</p>
-            <button onclick="mostrarInfo(this)">Más información</button>
-            <div class="info-extra">
-              <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
-              <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
-            </div>
-          </article>
-        </section>
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Guilty 💎</h3>
+              <p><strong>Hora:</strong> 11:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/NinLMJjvPi8VuJqK7" style="color: inherit; text-decoration: none;"> Praça da República 34 Loja R/C, 4050-495 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Stranger Room 💡</h3>
+              <p><strong>Hora:</strong> 13:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/NinLMJjvPi8VuJqK7" style="color: inherit; text-decoration: none;"> Praça da República 34 Loja R/C, 4050-495 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+       
+
+        <section class="dia">
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Cativeiro 🥷</h3>
+              <p><strong>Hora:</strong> 15:15h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/ixaxHjvhrxoMFa296" style="color: inherit; text-decoration: none;"> R. de Latino Coelho 322, 4000-225 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+       
+
+        <section class="dia">
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Invictus 💰</h3>
+              <p><strong>Hora:</strong> 19:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/jfgb673ewbopjtV47" style="color: inherit; text-decoration: none;"> R. de Alexandre Braga 40 2ºFrente, 4000-049 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Apocalypse 🧟</h3>
+              <p><strong>Hora:</strong> 20:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/jfgb673ewbopjtV47" style="color: inherit; text-decoration: none;"> R. de Alexandre Braga 40 2ºFrente, 4000-049 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+       
+
+        <section class="dia">
+            <h2>📌 Viernes 29 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Dark Cube ⬛</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/pYSpxMWu2xdvKUuo7" style="color: inherit; text-decoration: none;"> Al. das Antas 14, 4350-415 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>              
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Porto Wine Sabotage 🍷</h3>
+              <p><strong>Hora:</strong> 10:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/SacxVMn3LG638VSH9" style="color: inherit; text-decoration: none;"> Praça Guilherme Gomes Fernandes 53, 1º Fr, 4050-293 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Porto Lost Memories 📖</h3>
+              <p><strong>Hora:</strong> 12:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/SacxVMn3LG638VSH9" style="color: inherit; text-decoration: none;"> Praça Guilherme Gomes Fernandes 53, 1º Fr, 4050-293 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>The Sacrifice 🩸🔪</h3>
+              <p><strong>Hora:</strong> 14:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/SacxVMn3LG638VSH9" style="color: inherit; text-decoration: none;"> Praça Guilherme Gomes Fernandes 53, 1º Fr, 4050-293 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Prisao da PIDE 👮‍♂️</h3>
+              <p><strong>Hora:</strong> 18:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Terrasa de Vera Cruz 🏔️</h3>
+              <p><strong>Hora:</strong> 19:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Ressaca 🍻🍹</h3>
+              <p><strong>Hora:</strong> 20:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Sábado 30 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>The Last Game Porto 🎮🕹️</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/EydgnBSdzKCZDVSk9" style="color: inherit; text-decoration: none;"> Cave Centro Empresarial Capitólio, Av. da França 256 Loja 31, 4050-276 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Casa da Moeda 💵</h3>
+              <p><strong>Hora:</strong> 10:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Professor: Assalto Final 💣</h3>
+              <p><strong>Hora:</strong> 11:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>The Game 🎲</h3>
+              <p><strong>Hora:</strong> 13:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+        
+
+        <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Portugal</h2>
+            <article class="juego">
+              <h3>Dead City ☠️</h3>
+              <p><strong>Hora:</strong> 14:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Porto 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button> 
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/HrwuG5gfSYk5xNp9A" style="color: inherit; text-decoration: none;"> R. da Boavista 110, 4050-354 Porto, Portugal (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+         </section>
       </div>
 
+      <!-- Planing de Galicia -->
 
+      <button onclick="mostrarInfo2(this)"><strong>Galicia</strong></button>
+      <div class="info-extra2">
 
-  <button id="btnNotificaciones">🔔 Activar notificaciones</button>
+          <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Galicia</h2>
+            <article class="juego">
+              <h3>La Cabaña de la Bruja 🧙​</h3>
+              <p><strong>Hora:</strong> 21:10h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Vigo 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/T4tmpzjSUmrb7zRy7" style="color: inherit; text-decoration: none;"> Rúa Escultor Gregorio Fernández, 2, Santiago de Vigo, 36204 Vigo, Pontevedra (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Lunes 1 de septiembre – Galicia</h2>
+            <article class="juego">
+              <h3>​Ladrones del Grimorio ✨</h3>
+              <p><strong>Hora:</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Vigo 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/T4tmpzjSUmrb7zRy7" style="color: inherit; text-decoration: none;"> Rúa Escultor Gregorio Fernández, 2, Santiago de Vigo, 36204 Vigo, Pontevedra (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Lunes 1 de septiembre – Galicia</h2>
+            <article class="juego">
+              <h3>Cueva del Conocimiento 🏞️</h3>
+              <p><strong>Hora:</strong> 11:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Vigo 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/T4tmpzjSUmrb7zRy7" style="color: inherit; text-decoration: none;"> Rúa Escultor Gregorio Fernández, 2, Santiago de Vigo, 36204 Vigo, Pontevedra (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>              
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Lunes 1 de septiembre – Galicia</h2>
+            <article class="juego">
+              <h3>Tras el último Dragón 🐉</h3>
+              <p><strong>Hora:</strong> 16:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Santiago de Compostela 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/VAkrVxjpV9TQz2tF6" style="color: inherit; text-decoration: none;"> Galerías Zafiro, R. de Frei Rosendo Salvado, 13, 15701 Santiago de Compostela, A Coruña (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Lunes 1 de septiembre – Galicia</h2>
+            <article class="juego">
+              <h3>Corporación Pineapple 🍍</h3>
+              <p><strong>Hora:</strong> 19:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Santiago de Compostela 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/q1Yhou348ftqfiz28" style="color: inherit; text-decoration: none;"> CC Area Central, 1ª Planta Local 28NO, 15707 Santiago de Compostela, A Coruña (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Lunes 1 de septiembre – Galicia</h2>
+            <article class="juego">
+              <h3>Experimento clandestino 🎰</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Santiago de Compostela 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/q1Yhou348ftqfiz28" style="color: inherit; text-decoration: none;"> CC Area Central, 1ª Planta Local 28NO, 15707 Santiago de Compostela, A Coruña (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>               
+              </div>
+            </article>
+          </section>
+      </div> 
+      
+      <!-- Planing de Fracia -->
+
+      <button onclick="mostrarInfo2(this)"><strong>Francia</strong></button>
+      <div class="info-extra2">
+
+          <section class="dia">
+            <h2>📌 Jueves 4 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Le Grand Hotel de Paris </h3>
+              <p><strong>Hora</strong> 11:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p> 
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 4 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>​Nautilus </h3>
+              <p><strong>Hora:</strong> 14:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 4 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Secret Mission </h3>
+              <p><strong>Hora:</strong> 16:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 4 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Galactic Mission </h3>
+              <p><strong>Hora:</strong> 20:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Viernes 5 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Doomed Expedition </h3>
+              <p><strong>Hora</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p> 
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Viernes 5 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>​The Crypt </h3>
+              <p><strong>Hora:</strong> 12:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Viernes 5 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Full Experience </h3>
+              <p><strong>Hora:</strong> 16:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Viernes 5 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Taxidermist </h3>
+              <p><strong>Hora:</strong> 20:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Sábado 6 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Fairy Tale Regulations </h3>
+              <p><strong>Hora:</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p> 
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Sábado 6 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Fantastic Warehouse </h3>
+              <p><strong>Hora:</strong> 12:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Sábado 6 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Le Manoir Deveaux </h3>
+              <p><strong>Hora:</strong> 16:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Sábado 6 de septiembre – Francia</h2>
+            <article class="juego">
+              <h3>Druid's Bane </h3>
+              <p><strong>Hora:</strong> 18:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> París 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+      </div> 
+
+      <!-- Planing de Bélgica -->
+
+      <button onclick="mostrarInfo2(this)"><strong>Bélgica</strong></button>
+      <div class="info-extra2">
+
+          <section class="dia">
+            <h2>📌 Domingo 7 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>The Movies Experience​</h3>
+              <p><strong>Hora:</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Brujas 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Domingo 7 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Demise of the Gricers​</h3>
+              <p><strong>Hora:</strong> 17:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> As 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Lunes 8 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Saint Romualdus​</h3>
+              <p><strong>Hora:</strong> 11:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Mechelen 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Lunes 8 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Hans Revenge​</h3>
+              <p><strong>Hora:</strong> 13:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Mechelen 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Lunes 8 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Toy Factory​</h3>
+              <p><strong>Hora:</strong> 18:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Zoersel 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Lunes 8 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Monsters Mushers​</h3>
+              <p><strong>Hora:</strong> 21:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Zoersel 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+          <section class="dia">
+            <h2>📌 Jueves 11 de septiembre – Bélgica</h2>
+            <article class="juego">
+              <h3>Botanist Manor​</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Rush 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+              </div>
+            </article>
+          </section>
+      </div> 
+
+      <!-- Planing de Países Bajos -->
+
+      <button onclick="mostrarInfo2(this)"><strong>Países Bajos</strong></button>
+      <div class="info-extra2">
+
+          <section class="dia">
+            <h2>📌 Martes 9 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Lost and Found​</h3>
+              <p><strong>Hora:</strong> 11:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Volkel 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Martes 9 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Illusion​</h3>
+              <p><strong>Hora:</strong> 14:45h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Waalwijk 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Martes 9 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Jason's Legacy</h3>
+              <p><strong>Hora:</strong> 18:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Rijswijk 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Martes 9 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Midnite</h3>
+              <p><strong>Hora:</strong> 20:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Rijswijk 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Miércoles 10 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Molly's Game</h3>
+              <p><strong>Hora:</strong> 10:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Voorburg 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Miércoles 10 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Pray</h3>
+              <p><strong>Hora:</strong> 14:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Katwijk 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Miércoles 10 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>The Non Believers</h3>
+              <p><strong>Hora:</strong> 17:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Leiden 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Miércoles 10 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Are you Lost? - Equipo 1</h3>
+              <p><strong>Hora:</strong> 20:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Leiden 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Miércoles 10 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>Are you Lost? - Equipo 2</h3>
+              <p><strong>Hora:</strong> 22:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Leiden 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 11 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>The Dome</h3>
+              <p><strong>Hora:</strong> 11:30h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Leiden 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="dia">
+            <h2>📌 Jueves 11 de septiembre – Países Bajos</h2>
+            <article class="juego">
+              <h3>The Alchemist</h3>
+              <p><strong>Hora:</strong> 16:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Leiden 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+          
+      </div> 
+
+      <!-- Planing de Zaragoza -->
+
+      <button onclick="mostrarInfo2(this)"><strong>Zaragoza</strong></button>
+      <div class="info-extra2">
+
+          <section class="dia">
+            <h2>📌 Domingo 31 de agosto – Galicia</h2>
+            <article class="juego">
+              <h3>La Cabaña de la Bruja​</h3>
+              <p><strong>Hora:</strong> 11:00h ⏱️​</p></a>
+              <p><strong>Lugar:</strong> Lisboa 📍</p>
+              <button onclick="mostrarInfo(this)">Más información</button>
+              <div class="info-extra">
+                <p><strong>Historia:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+                <p><strong>Dirección completa:</strong><a href="https://maps.app.goo.gl/f4CS7cpqzi9mJn9W6" style="color: inherit; text-decoration: none;"> Rua Ernesto da Silva 54 Loja A Algés, Oeiras (Enlace a Google Maps)</a></p>
+                <p><strong>Información extra importante:</strong> Viniste a alojarte en el Escape Hotel y te encontraste dentro de un sueño. ¿Podrás escapar de ello?​</p>
+              </div>
+            </article>
+          </section>
+      </div> 
+
+      <button onclick="mostrarResumen()">Resumen del día:</button>
+      <div id="resumenModal" class="modal">
+        <div class="modal-content">
+          <h2>🔐📌🧬💣</h2>
+          <h2>¡Venga, a tope con el día!</h2>
+          <ul id="listaJuegos"></ul>
+          <p id="mensaje"></p>
+          <button class="close-btn" onclick="cerrarResumen()">Cerrar</button>
+        </div>
+      </div>
+
+      <section class="dia">
+        <h4>🚀 Desplazamietos: ​</h4>
+        <div>  
+          <p><strong>🚝 Barcelona ➜ Madrid</strong></p></a>
+            <ul>
+              <li><strong>¿Cuándo? ⮕</strong> 27 de Agosto.</li>
+              <li><strong>¿A qué hora? ⮕</strong> 6:35h de la mañana.</li>
+              <li><strong>Estación de salida ⮕</strong> Estació de Sants.</li>
+            </ul>
+        </div>
+        <div>  
+          <p><strong>🚝 Madrid ➜ Vigo</strong></p></a>
+            <ul>
+              <li><strong>¿Cuándo? ⮕</strong> 27 de Agosto.</li>
+              <li><strong>¿A qué hora? ⮕</strong> 11:17h de la mañana (llegada programada a las 15:26h).</li>
+              <li><strong>Estación de salida ⮕</strong> Madrid - Chamartín.</li>
+            </ul>
+        </div>
+        <div>  
+          <p><strong>🚝 Vigo ➜ Porto</strong></p></a>
+            <ul>
+              <li><strong>¿Cuándo? ⮕</strong> 27 de Agosto.</li>
+              <li><strong>¿A qué hora? ⮕</strong> 17:30h de la tarde (llegada programada a las 19:15h).</li>
+              <li><strong>Estación de salida ⮕</strong> Vigo Urzaiz Estación de Autobuses.</li>
+            </ul>
+        </div>
+      </section>
+        
+      
 
   <script>
+
+      const juegosPorFecha = {
+      "2025-07-04": [
+        { hora: "10:00", nombre: "Dream" },
+        { hora: "13:00", nombre: "Haunted Dinner" },
+        { hora: "14:00", nombre: "Mad Tea Party" },
+        { hora: "16:00", nombre: "Cyber Cube" }
+      ],
+      "2025-08-29": [
+        { hora: "11:30", nombre: "La Casa del Terror" },
+        { hora: "16:00", nombre: "Prison Break" }
+      ],
+      "2025-08-30": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-08-31": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-01": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-02": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-03": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-04": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-05": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-06": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-07": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-08": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-09": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-10": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ],
+      "2025-09-11": [
+        { hora: "09:45", nombre: "Inframundo" },
+        { hora: "18:30", nombre: "El Orfanato Maldito" }
+      ]
+      
+      // Añade más días aquí
+    };
+
+    function mostrarResumen() {
+      const hoy = new Date();
+      const fechaActual = hoy.toISOString().split("T")[0];
+      const juegosHoy = juegosPorFecha[fechaActual] || [];
+
+      const lista = document.getElementById("listaJuegos");
+      const mensaje = document.getElementById("mensaje");
+      lista.innerHTML = "";
+      mensaje.textContent = "";
+
+      if (juegosHoy.length > 0) {
+        juegosHoy.forEach(juego => {
+          const li = document.createElement("li");
+          li.textContent = `${juego.hora} ⮕ ${juego.nombre}`;
+          lista.appendChild(li);
+        });
+      } else {
+        mensaje.textContent = "Hoy puedes descansar, pero no te duermas, que pronto tienes más juegos por delante, ¡coge fuerzas!.";
+      }
+
+
+      document.getElementById("resumenModal").style.display = "flex";
+    }
+
+
+    function cerrarResumen() {
+      document.getElementById("resumenModal").style.display = "none";
+    }
+
+    // Cierre al hacer clic fuera del modal
+    window.onclick = function(event) {
+      const modal = document.getElementById("resumenModal");
+      if (event.target === modal) {
+        cerrarResumen();
+      }
+    }
+
 
     document.getElementById('btnNotificaciones').addEventListener('click', () => {
     solicitarPermiso(); // tu función que pide permiso y programa notificaciones locales
